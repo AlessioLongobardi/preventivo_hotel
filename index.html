@@ -34,7 +34,7 @@
                     <a class="nav-link" href="#">Contatti</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Preventivo</a>
+                    <a class="nav-link" href="#servizi">Preventivo</a>
                 </li>
             </ul>
         </div>
@@ -252,7 +252,7 @@
             var prezzoAdulto = parseFloat(document.getElementById("prezzoAdulto").value);
             var prezzoBambino = parseFloat(document.getElementById("prezzoBambino").value);
 
-
+            //calcolo
             var ospiti = adultiInput + bambini;
             var costoAdulti = prezzoAdulto * adultiInput * notti;
             var costoBambini = prezzoBambino * bambini * notti;
@@ -299,7 +299,7 @@
             document.getElementById("tabellaPreventivi").innerHTML += nuovaRiga;
         }
         function resetCampi() {
-            document.getElementById("nome").value = ""; //in questo modo resetta la variabile del nome cliccando su nuovo paziente
+            document.getElementById("nome").value = ""; 
             document.getElementById("cognome").value = "";
             document.querySelector(".popover #notti").value = "1";
             document.querySelector(".popover #adultiInput").value = "1";
