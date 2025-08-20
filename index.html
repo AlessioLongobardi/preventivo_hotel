@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Preventivo - Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            background: url('img/mare.gif') no-repeat center center fixed;
+            background-size: cover; 
+        }
+    </style>
+
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+
+                Hotel TurboAllo
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contatti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Preventivo</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+
+    <div class="container py-2">
+        <div class="card text-bg-dark ">
+            <img src="img/hotel.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Hotel Turboallo</h5>
+                <p class="card-text">Soggiornare in un hotel con vista sul mare è un'esperienza unica che offre relax e bellezza paesaggistica.</p>
+                <h4 class="card-title">Vieni a trovarci ci troviamo a Isla Sorna</h4>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container py-5">
+        <div class=" card shadow p-4 mb-3">
+            <h5 class="mb-3">I nostri Tour</h5>
+            <div class="card-group">
+                <div class="card  ">
+                    <img src="img/tour.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Al Galoppo sul Tyrannosauro</h5>
+                        <p class="card-text">Vuoi vivere un'esperienza fuori dal normale? Vieni a vivere l'esperienza direttamente dal jurassico. Cavalca un Tyrannosauro insieme a noi</p>
+                        <p class="card-text"><small class="text-body-secondary">Compreso nel soggiorno</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/struttura-1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Piscina</h5>
+                        <p class="card-text">La nostra piscina con idromassaggio riscaldata </p>
+                        <p class="card-text"><small class="text-body-secondary">Compreso nel soggiorno</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/struttura-2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Spiaggia Privata</h5>
+                        <p class="card-text">Spiaggia privata con tutti i confort con musica e relax</p>
+                        <p class="card-text"><small class="text-body-secondary">Compreso nel soggiorno</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a class="btn btn-primary me-1" href="#servizi">Preventivo</a>
+
+            </div>
+
+            <hr class="border border-success border-2 opacity-50"/>
+
+            <h4 class="mt-4 mb-3">Galleria</h4>
+            <div class="row row-cols-1 row-cols-md-3 g-5">
+
+                <img src="img/galleria-1.jpg" class="" alt="...">
+                <img src="img/galleria-2.jpg" class="" alt="...">
+                <img src="img/galleria-3.jpg" class="" alt="...">
+            </div>
+
+
+
+        </div>
+        
+    </div>
+
+    <!--input per inserire dati-->
+    <div class="container py-5" id="servizi">
+
+
+        <div class="card shadow p-4 mb-3">
+            <h5 class="mb-3">Dati Cliente</h5>
+
+            <div class="row g-3">
+
+                <div class="row g-3 ">
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="nome" placeholder="Nome" />
+                    </div>
+
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="cognome" placeholder="Cognome" />
+                    </div>
+
+                    <div class="col-sm-3">
+                        <button type="button" id="popoverBtn" class="btn btn-danger">
+                            Ospiti e Camere
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div id="popoverContent" class="d-none">
+                    <div class="p-2" style="min-width:200px">
+
+                        <div class="mb-2">
+                            <label for="notti" class="form-label">Notti</label>
+                            <input type="number" id="notti" class="form-control" value="1" min="1">
+                        </div>
+
+                        <!-- Adulti -->
+                        <div class="mb-2">
+                            <label for="adultiInput" class="form-label">Adulti</label>
+                            <input type="number" id="adultiInput" class="form-control" value="1" min="0">
+                            <input type="hidden" id="prezzoAdulto" value="15">
+                        </div>
+                        <!-- Bambini -->
+                        <div class="mb-2">
+                            <label for="bambini" class="form-label">Bambini</label>
+                            <input type="number" id="bambini" class="form-control" value="0" min="0">
+                            <input type="hidden" id="prezzoBambino" value="5">
+                        </div>
+                        <!-- Camere -->
+                        <div>
+                            <label class="form-label">Tipo camera:</label>
+                            <select id="camera" class="form-select">
+                                <option value="50">Singola - 50€/notte</option>
+                                <option value="80">Doppia - 80€/notte</option>
+                                <option value="120">Suite - 120€/notte</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <!--Extra-->
+
+
+                <h4 class="mt-4 mb-3">Extra opzionali</h4>
+                <div class="text-left mt-4">
+                    <input type="checkbox" class="btn-check" id="colazione" autocomplete="off" value="5">
+                    <label class="btn btn-outline-primary" for="colazione">Colazione (5€ a persona/notte) </label>
+
+                    <input type="checkbox" class="btn-check" id="parcheggio" autocomplete="off" value="10">
+                    <label class="btn btn-outline-primary" for="parcheggio">Parcheggio (10€ a notte)</label>
+
+                    <input type="checkbox" class="btn-check" id="animali" autocomplete="off" value="3">
+                    <label class="btn btn-outline-primary" for="animali">Animali Domestici (3€ a notte)</label>
+
+                    <!--Tassa-->
+
+                    <h4 class="mt-4 mb-3">Tassa di soggiorno</h4>
+                    <div class="col-md-1">
+                        <input type="number" disabled id="tassa" class="form-control" value="2" min="0">
+                        <small class="text-muted">2€/notte</small>
+                    </div>
+                </div>
+
+
+                <!--pulsanti-->
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary me-2" onclick="calcolaPreventivi()">Calcola</button>
+                <button class="btn btn-secondary" onclick="resetCampi()">Nuovo Preventivo</button>
+            </div>
+
+            <!--risultato -->
+            <div class="mt-4 text-success fw-bold" id="risultato"></div>
+        </div>
+
+
+        <!--Tabella Clienti-->
+
+        <h3 class="mb-3">Elenco Clienti</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-l">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cognome</th>
+                        <th>Notti</th>
+                        <th>Ospiti</th>
+                        <th>Adulti</th>
+                        <th>Bambini</th>
+                        <th>Camera</th>
+                        <th>Colazione</th>
+                        <th>Parcheggio</th>
+                        <th>Animali Domestici</th>
+                        <th>Totale €</th>
+                    </tr>
+                </thead>
+                <tbody id="tabellaPreventivi"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <!--Footer-->
+    <footer class="bg-success text-white text-center py-2">
+        <p class="mb-0">&copy; 2025 Hotel TurboAllo - Tutti i diritti riservati</p>
+    </footer>
+
+    <!--Javascript-->
+    <script>
+        function calcolaPreventivi() {
+            const nome = document.getElementById("nome").value.trim();
+            const cognome = document.getElementById("cognome").value.trim();
+            var notti = parseFloat(document.querySelector(".popover #notti").value)
+            var adultiInput = parseFloat(document.querySelector(".popover #adultiInput").value)
+            var bambini = parseFloat(document.querySelector(".popover #bambini").value)
+            var camera = parseFloat(document.querySelector(".popover #camera").value);
+            var colazione = document.getElementById("colazione").checked ? parseFloat(document.getElementById("colazione").value) : 0;
+            var parcheggio = document.getElementById("parcheggio").checked ? parseFloat(document.getElementById("parcheggio").value) : 0;
+            var animali = document.getElementById("animali").checked ? parseFloat(document.getElementById("animali").value) : 0;
+            var tassa = parseFloat(document.getElementById("tassa").value);
+            var prezzoAdulto = parseFloat(document.getElementById("prezzoAdulto").value);
+            var prezzoBambino = parseFloat(document.getElementById("prezzoBambino").value);
+
+
+            var ospiti = adultiInput + bambini;
+            var costoAdulti = prezzoAdulto * adultiInput * notti;
+            var costoBambini = prezzoBambino * bambini * notti;
+            var costoCamera = camera * notti;
+            var costoColazione = colazione * ospiti * notti;
+            var costoParcheggio = parcheggio * notti;
+            var costoAnimali = animali * notti;
+            var costoTassa = tassa * ospiti * notti;
+            var totale = costoCamera + costoAdulti + costoBambini + costoColazione + costoParcheggio + costoTassa + costoAnimali;
+
+
+
+
+            //risultato
+            var risultato = "<p>Risultati per il cliente <strong>" + nome + " " + cognome + "</strong>:</p>";
+            risultato += "<ul>";
+            risultato += "<li>Camera: <strong>" + costoCamera.toFixed(2) + "</strong> € </li>";
+            risultato += "<li>Adulti: <strong>" + costoAdulti.toFixed(2) + "</strong> € </li>";
+            risultato += "<li>Bambini: <strong>" + costoBambini.toFixed(2) + "</strong> € </li>";
+            risultato += "<li>Colazione: <strong>" + costoColazione.toFixed(2) + "</strong> € </li>";
+            risultato += "<li>Parcheggio: <strong>" + costoParcheggio.toFixed(2) + "</strong> € </li>";
+            risultato += "<li>Animali: <strong>" + costoAnimali.toFixed(2) + "</strong> € </li>";
+            risultato += "<li>Tassa: <strong>" + costoTassa.toFixed(2) + "</strong> € </li>";
+            risultato += "<li>Totale: <strong>" + totale.toFixed(2) + "</strong> € </li>";
+            risultato += "</ul>";
+            document.getElementById("risultato").innerHTML = risultato;
+
+
+            //Tabella
+            var nuovaRiga = "<tr>";
+            nuovaRiga += "<td>" + nome + "</td>";
+            nuovaRiga += "<td>" + cognome + "</td>";
+            nuovaRiga += "<td>" + notti + "</td>";
+            nuovaRiga += "<td>" + ospiti + "</td>";
+            nuovaRiga += "<td>" + costoAdulti + "€ </td>";
+            nuovaRiga += "<td>" + costoBambini + "€ </td>";
+            nuovaRiga += "<td>" + costoCamera + "€ </td>";
+            nuovaRiga += "<td>" + costoColazione + "€ </td>";
+            nuovaRiga += "<td>" + costoParcheggio + "€ </td>";
+            nuovaRiga += "<td>" + costoAnimali + "€ </td>";
+            nuovaRiga += "<td>" + totale + "€ </td>";
+            nuovaRiga += "</tr>";
+
+            document.getElementById("tabellaPreventivi").innerHTML += nuovaRiga;
+        }
+        function resetCampi() {
+            document.getElementById("nome").value = ""; //in questo modo resetta la variabile del nome cliccando su nuovo paziente
+            document.getElementById("cognome").value = "";
+            document.querySelector(".popover #notti").value = "1";
+            document.querySelector(".popover #adultiInput").value = "1";
+            document.querySelector(".popover #bambini").value = "0";
+            document.getElementById("colazione").checked = "";
+            document.getElementById("parcheggio").checked = "";
+            document.getElementById("animali").checked = "";
+            document.getElementById("risultato").innerHTML = "";
+        }
+
+        //popovers
+
+        document.addEventListener("DOMContentLoaded", function () {
+            new bootstrap.Popover(document.getElementById('popoverBtn'), {
+                container: 'body',
+                html: true,
+                sanitize: false,
+                content: function () {
+                    return document.getElementById('popoverContent').innerHTML;
+                }
+            });
+        });
+
+
+    </script>
+</body>
+</html>
